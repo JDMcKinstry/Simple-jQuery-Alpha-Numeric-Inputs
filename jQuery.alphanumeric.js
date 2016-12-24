@@ -17,6 +17,6 @@
 	}
 	$(document).on('keydown', 'input', function(e) {
 		var a = $(this), b = e.key, c = a.data('allow');
-		return 1 == a.length ? procInput(a, b, c) : !0;
+		return (!e.altKey && !e.ctrlKey) && 1 == b.length ? procInput(a, b, c) : !0;
 	});
 })(jQuery);
