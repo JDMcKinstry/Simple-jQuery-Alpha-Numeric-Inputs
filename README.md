@@ -8,9 +8,9 @@ Simply give any input 1 of the three following classes and watch the magic!
  - **alpha**
  - **numeric**
  - **alphanumeric**
+
+---
+
+If you'd like to allow a few other chars, such as "$" or "&", then simply include them in a data attribute named "allow", like so:
  
- ---
- 
- If you'd like to allow a few other chars, such as "$" or "&", then simply include them in a data attribute named "allow", like so:
- 
-	  <input class="alpha" data-allow="$#*" type="text" />
+    <input class="alpha" data-allow="$#*" type="text" />
