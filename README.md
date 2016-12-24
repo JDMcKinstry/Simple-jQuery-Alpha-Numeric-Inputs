@@ -1,4 +1,4 @@
-# Simple-jQuery-Alpha-Numeric-Inputs
+# Simple jQuery Alpha Numeric Inputs
 
 ##### Extremely simple and easy way to add `alpha`, `numeric`, and `alphanumeric` inputs to any page.
 
