@@ -23,3 +23,7 @@ If you'd like to allow a few other chars, such as "$" or "&", then simply includ
 
 ### Extended version
 ## [JSFiddle](https://jsfiddle.net/SpYk3/y7f0qLLd/) <sub>has toggle ability</sub>
+
+    $.inputAlphaNumeric.toggle();  //  toggles feature on || off
+    $.inputAlphaNumeric.on();  //  turns feature on
+    $.inputAlphaNumeric.off();  //  turns feature off
