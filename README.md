@@ -30,3 +30,14 @@ Initially "on", but can be set to be initially "off" by simply changing first va
     $.inputAlphaNumeric.toggle();  //  toggles feature on || off
     $.inputAlphaNumeric.on();  //  turns feature on
     $.inputAlphaNumeric.off();  //  turns feature off
+
+---
+
+	$.each($.inputAlphaNumeric, function(k,v) { console.debug(k, v); });
+	console.debug("$.inputAlphaNumeric:\t", $.inputAlphaNumeric);
+	/*-Will result in the following:--*/
+	classes ["alpha", "numeric", "alphanumeric"]
+	inputs [prevObject: h.fn.init[1], context: document, selector: ".alpha, .numeric, .alphanumeric"]
+	regEx Object {alpha: /[a-z]/i, numeric: /[0-9]/, alphanumeric: /[a-z]|[0-9]/i}
+	selector .alpha, .numeric, .alphanumeric
+	$.inputAlphaNumeric:	 Object {__state: false}
