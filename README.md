@@ -18,7 +18,7 @@ If you'd like to allow a few other chars, such as "$" or "&", then simply includ
 ---
 
 ##[JSFiddle](https://jsfiddle.net/SpYk3/yda2cuoz/)
-### Quick Link:  [jQuery.alphanumeric.ext.js](https://cdn.rawgit.com/JDMcKinstry/Simple-jQuery-Alpha-Numeric-Inputs/master/jQuery.alphanumeric.js)
+### Quick Link:  [jQuery.alphanumeric.js](https://cdn.rawgit.com/JDMcKinstry/Simple-jQuery-Alpha-Numeric-Inputs/master/jQuery.alphanumeric.js)
 
 ---
 
