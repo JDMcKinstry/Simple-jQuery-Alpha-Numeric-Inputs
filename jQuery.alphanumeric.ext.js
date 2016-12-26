@@ -1,8 +1,29 @@
 ;(function($) {	//	$.inputAlphaNumeric	//	set first variable "initializeON" to bool to toggle on || off from document.ready
-	var initializeON = false;
+	var initializeON = true;
 	
 	function __event(e) {
 		return $.inputAlphaNumeric.keydown.event.apply($.inputAlphaNumeric, [e, this]);
+	}
+	
+	function adjustValue() {	//	clean up inputs when feature is toggled 'on'
+		if (this.state) {
+			var regEx = this.regEx;
+			this.inputs.each(function() {
+				var a = $(this), b = a.val(), c = a.data('allow');
+				if (b != '') switch(!0) {
+					case $(this).hasClass('alpha'):
+						a.val( b.split('').filter(function(v) { if (0 <= c.indexOf(v) || regEx.alpha.test(v)) return v; }).join('') );
+						break;
+					case $(this).hasClass('numeric'):
+						a.val( b.split('').filter(function(v) { if (0 <= c.indexOf(v) || regEx.numeric.test(v)) return v; }).join('') );
+						break;
+					case $(this).hasClass('alphanumeric'):
+						a.val( b.split('').filter(function(v) { if (0 <= c.indexOf(v) || regEx.alphanumeric.test(v)) return v; }).join('') );
+						break;
+				}
+			});
+		}
+		return this;
 	}
 	
 	function keyDown() {
@@ -28,7 +49,14 @@
 	function inputAlphaNumeric(initOn) {
 		Object.defineProperties(this, {
 			__state: { enumerable: false, value: false, writable: true },
-			keydown: { enumerable: true, get: keyDown },
+			adjustVal: {
+				enumerable: false,
+				value: adjustValue,
+				writable: false
+			},
+			classes: { enumerable: true, get: function() { return [ 'alpha', 'numeric', 'alphanumeric' ]; } },
+			inputs: { enumerable: true, get: function() { return $(this.selector); } },
+			keydown: { enumerable: false, get: keyDown },
 			off: { value: function() { return this.toggle('off'); } },
 			on: { value: function() { return this.toggle('on'); } },
 			regEx: {
@@ -41,6 +69,7 @@
 					}
 				}
 			},
+			selector: { enumerable: true, get: function() { return '.' + this.classes.join(', .'); } },
 			state: {
 				get: function() { return this.__state; },
 				set: function(onOff) {
@@ -70,7 +99,7 @@
 				value: function(onOff) {
 					this.state = void 0 == onOff ? !this.state : onOff;
 					$(document)[this.state ? 'on' : 'off']('keydown', 'input', __event);
-					return this;
+					return this.adjustVal();
 				}
 			}
 		});
