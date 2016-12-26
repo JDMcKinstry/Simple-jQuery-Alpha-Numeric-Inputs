@@ -1,5 +1,5 @@
-;(function($) {
-	var initializeON = true;
+;(function($) {	//	$.inputAlphaNumeric	//	set first variable "initializeON" to bool to toggle on || off from document.ready
+	var initializeON = false;
 	
 	function __event(e) {
 		return $.inputAlphaNumeric.keydown.event.apply($.inputAlphaNumeric, [e, this]);
@@ -69,8 +69,7 @@
 			toggle: {
 				value: function(onOff) {
 					this.state = void 0 == onOff ? !this.state : onOff;
-					if (this.state) $(document).on('keydown', 'input', __event);
-					else $(document).off('keydown', 'input', __event);
+					$(document)[this.state ? 'on' : 'off']('keydown', 'input', __event);
 					return this;
 				}
 			}
