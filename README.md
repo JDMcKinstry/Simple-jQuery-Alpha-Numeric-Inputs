@@ -19,6 +19,7 @@ If you'd like to allow a few other chars, such as "$" or "&", then simply includ
 
 ##[JSFiddle](https://jsfiddle.net/SpYk3/yda2cuoz/)
 
+---
 
 ### Extended version <sub>has toggle ability</sub>
 ## [JSFiddle](https://jsfiddle.net/SpYk3/y7f0qLLd/)
