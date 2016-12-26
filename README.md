@@ -21,5 +21,5 @@ If you'd like to allow a few other chars, such as "$" or "&", then simply includ
 
 ---
 
-### Extended version <sub>has toggle ability</sub>
-## [JSFiddle](https://jsfiddle.net/SpYk3/y7f0qLLd/)
+### Extended version
+## [JSFiddle](https://jsfiddle.net/SpYk3/y7f0qLLd/) <sub>has toggle ability</sub>
