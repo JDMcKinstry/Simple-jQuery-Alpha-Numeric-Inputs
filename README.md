@@ -18,11 +18,13 @@ If you'd like to allow a few other chars, such as "$" or "&", then simply includ
 ---
 
 ##[JSFiddle](https://jsfiddle.net/SpYk3/yda2cuoz/)
+### Quick Link:  [jQuery.alphanumeric.ext.js](https://cdn.rawgit.com/JDMcKinstry/Simple-jQuery-Alpha-Numeric-Inputs/master/jQuery.alphanumeric.js)
 
 ---
 
 ### Extended version
 ## [JSFiddle](https://jsfiddle.net/SpYk3/y7f0qLLd/) <sub>has toggle ability</sub>
+### Quick Link:  [jQuery.alphanumeric.ext.js](https://cdn.rawgit.com/JDMcKinstry/Simple-jQuery-Alpha-Numeric-Inputs/master/jQuery.alphanumeric.ext.js)
 Initially "on", but can be set to be initially "off" by simply changing first variable(`initializeON`) in plugin to `false`
 
     $.inputAlphaNumeric.toggle();  //  toggles feature on || off
