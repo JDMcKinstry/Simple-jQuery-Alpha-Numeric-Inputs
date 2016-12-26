@@ -39,9 +39,9 @@ $.inputAlphaNumeric.off();  //  turns feature off
 $.each($.inputAlphaNumeric, function(k,v) { console.debug(k, v); });
 console.debug("$.inputAlphaNumeric:\t", $.inputAlphaNumeric);
 /*-Will result in the following:--*/
-classes ["alpha", "numeric", "alphanumeric"]
-inputs [prevObject: h.fn.init[1], context: document, selector: ".alpha, .numeric, .alphanumeric"]
-regEx Object {alpha: /[a-z]/i, numeric: /[0-9]/, alphanumeric: /[a-z]|[0-9]/i}
-selector .alpha, .numeric, .alphanumeric
+classes:	 ["alpha", "numeric", "alphanumeric"]
+inputs:	 [prevObject: h.fn.init[1], context: document, selector: ".alpha, .numeric, .alphanumeric"]
+regEx:	 Object {alpha: /[a-z]/i, numeric: /[0-9]/, alphanumeric: /[a-z]|[0-9]/i}
+selector:	 .alpha, .numeric, .alphanumeric
 $.inputAlphaNumeric:	 Object {__state: false}
 ```
