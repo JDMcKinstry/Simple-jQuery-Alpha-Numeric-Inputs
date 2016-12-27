@@ -12,13 +12,13 @@
 				var a = $(this), b = a.val(), c = a.data('allow');
 				if (b != '') switch(!0) {
 					case $(this).hasClass('alpha'):
-						a.val( b.split('').filter(function(v) { if (0 <= c.indexOf(v) || regEx.alpha.test(v)) return v; }).join('') );
+						a.val( b.split('').filter(function(v) { if ((c && 0 <= c.indexOf(v)) || regEx.alpha.test(v)) return v; }).join('') );
 						break;
 					case $(this).hasClass('numeric'):
-						a.val( b.split('').filter(function(v) { if (0 <= c.indexOf(v) || regEx.numeric.test(v)) return v; }).join('') );
+						a.val( b.split('').filter(function(v) { if ((c && 0 <= c.indexOf(v)) || regEx.numeric.test(v)) return v; }).join('') );
 						break;
 					case $(this).hasClass('alphanumeric'):
-						a.val( b.split('').filter(function(v) { if (0 <= c.indexOf(v) || regEx.alphanumeric.test(v)) return v; }).join('') );
+						a.val( b.split('').filter(function(v) { if ((c && 0 <= c.indexOf(v)) || regEx.alphanumeric.test(v)) return v; }).join('') );
 						break;
 				}
 			});
@@ -106,5 +106,6 @@
 		if (initOn) this.on();
 		return this;
 	}
+	
 	$.inputAlphaNumeric = new inputAlphaNumeric(initializeON);
 })(jQuery);
